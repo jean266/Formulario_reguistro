@@ -1,0 +1,270 @@
+/** Media Queries **/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: hsl(0deg, 0%, 100%);
+  padding: 8rem 0 3rem 0;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    display: flex;
+    gap: 5rem;
+    margin: 2rem;
+  }
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 1.6666666667rem 0;
+  line-height: 3.5rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+.no-webp .bg {
+  background-image: url(../../build/img/bg-intro-mobile.png);
+}
+@media (min-width: 768px) {
+  .no-webp .bg {
+    background-image: url(../../build/img/bg-intro-desktop.png);
+  }
+}
+
+.webp .bg {
+  background-image: url(../../build/img/bg-intro-mobile.webp);
+}
+@media (min-width: 768px) {
+  .webp .bg {
+    background-image: url(../../build/img/bg-intro-desktop.webp);
+  }
+}
+
+.bg {
+  background-color: hsl(0deg, 100%, 74%);
+  background-size: cover;
+}
+
+.header {
+  margin-bottom: 7rem;
+  flex: 1;
+}
+.header p {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header {
+    margin: auto 0;
+  }
+  .header h1 {
+    text-align: left;
+    max-width: 40rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .header p {
+    text-align: left;
+  }
+}
+
+.plan {
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 2rem 5rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 0 hsla(249deg, 10%, 26%, 0.2);
+}
+.plan p {
+  text-align: center;
+}
+.plan span {
+  font-weight: 700;
+}
+
+.formulario_plan {
+  flex: 1;
+}
+
+.formulario {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 8px 0 hsla(249deg, 10%, 26%, 0.2);
+}
+@media (min-width: 768px) {
+  .formulario {
+    padding: 4rem;
+    margin-bottom: 0;
+  }
+}
+.formulario .campo {
+  display: flex;
+  align-items: center;
+  border: 1px solid hsla(249deg, 10%, 26%, 0.2);
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+}
+.formulario .campo:focus {
+  outline: none;
+  border: 1px solid hsl(249deg, 10%, 26%);
+}
+.formulario .campo img {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.formulario .campo.error {
+  border: 2px solid hsl(0deg, 100%, 74%);
+}
+.formulario .campo.error input:not([type=submit]) {
+  color: hsl(0deg, 100%, 74%);
+}
+.formulario .campo.error input:not([type=submit])::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.formulario .campo.error input:not([type=submit])::placeholder {
+  color: hsl(0deg, 0%, 100%);
+}
+.formulario .campo.error img {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition-property: opacity height;
+  transition-duration: 1000ms;
+}
+.formulario .campo.focus {
+  border: 2px solid hsl(246deg, 25%, 77%);
+}
+.formulario input:not([type=submit]) {
+  width: 100%;
+  border: none;
+  font-weight: 600;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+}
+.formulario input:not([type=submit])::-moz-placeholder {
+  font-weight: 600;
+}
+.formulario input:not([type=submit])::placeholder {
+  font-weight: 600;
+}
+.formulario input:not([type=submit]):focus {
+  outline: none;
+}
+.formulario fieldset {
+  border: none;
+  padding: 0;
+}
+.formulario input[type=submit] {
+  background-color: hsl(154deg, 59%, 51%);
+  padding: 1rem 3.5rem;
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5rem 0;
+  margin: 0;
+  border-radius: 0.5rem;
+  padding: 1.5rem 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: inset 0px -4px 0px #30bb7f;
+  font-size: 1.6rem;
+}
+.formulario input[type=submit]:hover {
+  background-color: #2ba671;
+  cursor: pointer;
+}
+.formulario input[type=submit]:hover {
+  background-color: #75dbaf;
+}
+.formulario p {
+  padding: 0 1rem;
+  color: hsl(246deg, 25%, 77%);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.formulario p span {
+  color: hsl(0deg, 100%, 74%);
+  font-weight: 600;
+}
+
+.alerta {
+  color: hsl(0deg, 100%, 74%);
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: right;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=app.css.map */
